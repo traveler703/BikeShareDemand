@@ -41,13 +41,6 @@ streamlit run app/dashboard.py
 - Capital Bikeshare System Data: https://capitalbikeshare.com/system-data
 - Open-Meteo Historical Weather API: https://open-meteo.com/en/docs/historical-weather-api
 
-## 分工
-
-- 数据工程负责人：下载、清洗、融合骑行和天气数据。
-- 算法负责人：模型实现、调参、指标对比。
-- 评估分析负责人：误差分析、特征重要性、调度策略。
-- 工程交付负责人：Streamlit Dashboard、README、演示材料。
-
 ## LSTM 与 GPU
 
 LSTM 使用 PyTorch 实现，默认用过去 24 小时的连续特征预测下一小时需求。训练时会自动选择 `cuda`，如果当前 PyTorch 是 CPU 版本或没有可用 CUDA，则回退到 `cpu`。可用设备会写入 `models/training_info.json`。
